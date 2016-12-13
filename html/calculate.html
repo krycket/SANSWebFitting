@@ -63,6 +63,7 @@
       modelnames.forEach(function(m) {
         $("#model_select").append($("<option />", {value: m, text: m}));
       });
+      load_module(modelnames[0]);
     });
 
     // add file loader
@@ -292,9 +293,7 @@
         document.body.appendChild(script);
       }
     }
-    
-    var MODULE_NAME = $.getUrlVar("model");
-    load_module($("#model_select").val());
+
   }
 </script>
 </head>
