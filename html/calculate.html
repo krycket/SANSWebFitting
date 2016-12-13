@@ -272,7 +272,8 @@
     }
     
     function load_module(module_name) {
-      Module = {postRun: [function() {make_params_panel(); run_sim();}]};
+      //Module = {postRun: [function() {make_params_panel(); run_sim();}]};
+      Module = {postRun: [function() {make_params_panel();}]};
       if (use_wasm) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', module_name + '.wasm', true);
